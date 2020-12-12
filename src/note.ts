@@ -15,7 +15,7 @@ enum Mes {
 }
 
 const aniversarioO: Mes = Mes.Dez; // retorna o número do mês
-const aniversarioD: string = Mes[2]; // retorn o nome do mês
+const aniversarioD: string = Mes[2]; // retorna o nome do mês
 
 console.log(aniversarioD);
 console.log(aniversarioO);
@@ -23,20 +23,20 @@ console.log(aniversarioO);
 /*-------------------------------------------------------------*/
 
 // Variáveis que retornam um valor desconhecido
-const retornaAPI: unknown = 'JSON retornanda pela API'
+const retornaAPI: unknown = 'JSON retornando pela API'
 console.log(retornaAPI)
 
 // Cancelar verificação de tipo ex: valores retornados de funções ou libs externas
 const strangerLib: any = 15643894165
-console.log('strengerLib')
+console.log('strangerLib')
 
-// Funcões que não pussem retorno
+// Funcões que não tem retorno
 const mFunc = ():void => {
-    console.log('Funçao sem retorno')
+    console.log('Função sem retorno')
 } 
 mFunc();
 
-// Funcões que recebem um objeto como parâmetro e retorna
+// Funções que recebem um objeto como parâmetro e retorna
 const enviaObjeto = function(o:object):object {
     return o
 }
