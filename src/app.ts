@@ -1,9 +1,13 @@
 import express from 'express';
 import cors from 'cors';
+import defaultRouter from './routers/default'
 
-const app = express()
+const app:any = express()
+const port:number = 8000
 
 app.use(cors())
-app.listen(3333, () => {
-  console.log('Servidor rodando: http://127.0.0.1:8000')
+app.use(defaultRouter)
+
+app.listen(port, () => {
+  console.log(`Servidor rodando: http://127.0.0.1:${port}`)
 })
