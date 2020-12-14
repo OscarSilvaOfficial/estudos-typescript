@@ -6,7 +6,7 @@ import debug from 'debug'
 
 const log = debug('api:main')
 const app:any = express()
-const port:number = 8000
+const PORT : string|number = process.env.PORT || 5000;
 
 app.use(cors())
 app.use(defaultRouter)
@@ -15,6 +15,6 @@ app.use((req:any, res:any, next:any) => {
   return next()
 })
 
-app.listen(port, () => {
-  log(`Servidor rodando: http://127.0.0.1:${port}`)
+app.listen(PORT, () => {
+  log(`Servidor rodando: http://127.0.0.1:${PORT}`)
 })
