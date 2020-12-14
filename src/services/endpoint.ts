@@ -1,16 +1,15 @@
 import { apiCovid } from './api'
 
 
-function getCovidSummary(): object {
+async function getCovidSummary() {
   const response = apiCovid.get('/summary')
-    .then((res) => {
+    .then((res:any) => {
         return res.data
     })
-    .catch((error) => {
+    .catch((error:any) => {
       return error
     })
-    
-  return response
+  return await response
 }
 
 export { getCovidSummary }

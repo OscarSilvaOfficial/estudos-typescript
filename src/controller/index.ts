@@ -1,6 +1,14 @@
 import { Request, Response } from 'express'
-import { getCovidSummary } from '../service/endpoint'
+import { getCovidSummary } from '../services/endpoint'
+import { sendMailService } from '../services/sendmail'
 
-export const index = async (req:Request, res:Response) => {
+
+async function index(req:Request, res:Response) {
     return res.json(await getCovidSummary())
 }
+
+async function sendMail(req:Request, res:Response) {
+    return res.send(sendMailService())
+}
+
+export { index, sendMail }

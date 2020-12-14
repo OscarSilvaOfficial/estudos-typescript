@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "tsc",
-    "dev": "ts-node-dev src/app.ts"
+    "start": "ts-node src/app.ts",
+    "dev": "DEBUG=* ts-node-dev --files src/app.ts"
   },
   "repository": {
     "type": "git",
@@ -21,10 +22,21 @@
   "dependencies": {
     "@types/cors": "^2.8.8",
     "@types/express": "^4.17.9",
+    "@types/node": "^14.14.13",
     "axios": "^0.21.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "nodemailer": "^6.4.17",
+    "nodemon": "^2.0.6",
+    "nubank-api": "^0.4.0",
+    "ts-node": "^9.1.1",
     "ts-node-dev": "^1.0.0",
-    "typescript": "^4.1.2"
+    "typescript": "^4.1.3",
+    "uuid-generator-ts": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/nodemailer": "^6.4.0"
   }
 }
