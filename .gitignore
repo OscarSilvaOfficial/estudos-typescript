@@ -117,3 +117,6 @@ dist
 
 # .Env
 .env
+
+package-lock.json
+yarn.lock
